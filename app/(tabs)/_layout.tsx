@@ -10,7 +10,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
       <>
         <ImageBackground
           source={images.highlight}
-          className="flex flex-row flex-1 min-w-[112px] min-h-14 mt-4 
+          className="flex flex-row w-full flex-1 min-w-[86px] min-h-[57px] mt-[20px] 
                     justify-center items-center rounded-full overflow-hidden"
         >
           <Image source={icon} tintColor={"#151312"} className="size-5" />
@@ -23,15 +23,36 @@ const TabIcon = ({ focused, icon, title }: any) => {
   }
 
   return (
-    <View>
-      <Image source={icon} />
+    <View className="size-full justify-center items-center mt-6 rounded-full">
+      <Image source={icon} tintColor={"#A8B5DB"} className="size-5" />
     </View>
   );
 };
 
 const _Layout = () => {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarItemStyle: {
+          height: "100%",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        },
+        tabBarStyle: {
+          backgroundColor: "#0f0D23",
+          borderRadius: 50,
+          marginHorizontal: 20,
+          marginBottom: 50,
+          height: 52,
+          position: "absolute",
+          overflow: "hidden",
+          borderWidth: 1,
+          borderColor: "#0f0D23",
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
