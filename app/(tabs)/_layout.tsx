@@ -2,7 +2,7 @@ import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { Tabs } from "expo-router";
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, Text, View } from "react-native";
 
 const TabIcon = ({ focused, icon, title }: any) => {
   if (focused) {
@@ -10,7 +10,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
       <>
         <ImageBackground
           source={images.highlight}
-          className="flex flex-row w-full flex-1 min-w-[86px] min-h-[57px] mt-[20px] 
+          className="flex flex-row w-full flex-1 min-w-[86px] min-h-[51px] mt-[20px] 
                     justify-center items-center rounded-full overflow-hidden"
         >
           <Image source={icon} tintColor={"#151312"} className="size-5" />
@@ -101,5 +101,3 @@ const _Layout = () => {
 };
 
 export default _Layout;
-
-const styles = StyleSheet.create({});
